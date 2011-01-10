@@ -217,3 +217,15 @@ div.more-link:hover {
 #reports .container .no-bugs {
   display: none;
 }
+#reports tr.important-product {
+  background: rgb(255, 255, 230);
+}
+#reports tr.important-product:hover {
+  background: rgb(255, 255, 210);
+}
+#reports tr.important-component {
+  background: rgb(255, 240, 240);
+}
+#reports tr.important-component:hover {
+  background: rgb(255, 230, 230);
+}

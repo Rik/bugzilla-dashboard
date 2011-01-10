@@ -510,6 +510,15 @@ Require.modules["app/ui/dashboard"] = function(exports, require) {
                      PRETTY_DATE_UPDATE_INTERVAL);
 
   const BUGS_TO_SHOW = 10;
+  
+  const IMPORTANT_COMPONENTS = [
+    "www.mozilla.com",
+    "getpersonas.com"
+  ];
+  const IMPORTANT_PRODUCTS = [
+    "Websites",
+    "mozilla.org"
+  ];
 
   function showBugs(query, bugs) {
     var table = $("#templates .bugs").clone();
@@ -523,6 +532,12 @@ Require.modules["app/ui/dashboard"] = function(exports, require) {
       if (bug.priority != "--") {
         row.addClass(bug.priority);
         row.addClass(bug.severity);
+      }
+      if (IMPORTANT_COMPONENTS.indexOf(bug.component) !== -1) {
+        row.addClass("important-component");
+      }
+      if (IMPORTANT_PRODUCTS.indexOf(bug.product) !== -1) {
+        row.addClass("important-product");
       }
       row.find(".last-changed").attr("data-last-change",
                                      bug.last_change_time);
