@@ -552,6 +552,10 @@ Require.modules["app/ui/dashboard"] = function(exports, require) {
     var extraBugs = bugs.slice(BUGS_TO_SHOW);
     bugs = bugs.slice(0, BUGS_TO_SHOW);
 
+    if (!bugs.length) {
+      query.addClass("no-bugs");
+    }
+
     bugs.forEach(appendRowForBug);
 
     updatePrettyDates(table);
