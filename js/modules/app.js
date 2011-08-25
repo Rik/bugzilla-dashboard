@@ -512,7 +512,7 @@ Require.modules["app/ui/dashboard"] = function(exports, require) {
   const BUGS_TO_SHOW = 10;
   
   const IMPORTANT_COMPONENTS = [
-    "www.mozilla.com",
+    "www.mozilla.org/firefox",
     "getpersonas.com"
   ];
   const IMPORTANT_PRODUCTS = [
