@@ -516,8 +516,7 @@ Require.modules["app/ui/dashboard"] = function(exports, require) {
     "getpersonas.com"
   ];
   const IMPORTANT_PRODUCTS = [
-    "Websites",
-    "mozilla.org"
+    "B2G",
   ];
 
   function showBugs(query, bugs) {
